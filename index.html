@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova infinity</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 16px;
+            }
+
+            *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        
+        body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ol, ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: #ebebeb;;
+        }
+        </style>
+</head>
+<body>
+    <!-- <button id="botao" onclick="clicou()">Botao</button> -->
+
+    <header>
+        <h1 id="titulo">
+            STARK INDUSTRIES
+        </h1>
+    </header>
+
+    <main>
+        <aside class="aside1">
+            <h1 class="titulo_aside">
+                O que são Criptomoedas
+            </h1>
+
+            <div class="texto_cripto">
+
+                Uma criptomoeda é uma moeda digital privada descentralizada, não sendo emitida por nenhum governo, que se utiliza da tecnologia de blockchain e da criptografia para assegurar a validade das transações e a criação de novas unidades da moeda. As criptomoedas são moedas digitais porque, diferentemente do nosso real, do dólar, do euro e de tantas outras moedas oficiais e de curso legal nos diferentes países, as quais podem ser manuseadas, elas só existem na internet. Ou seja, uma criptomoeda não pode ser guardada na bolsa ou em uma carteira convencional, podendo ser armazenada única e exclusivamente em meio virtual.
+            </div>
+        </aside>
+
+        <aside class="aside2">
+            <h1 class="titulo_aside"> 
+                Para que servem as Criptomoedas
+            </h1>
+
+            <div class="texto_cripto2">
+                <ol type="1" start="1">
+                   
+                        <p>1. Meio de troca: Por meio de transações seguras e descentralizadas, as criptomoedas permitem que indivíduos e empresas realizem transações sem a necessidade de intermediários tradicionais, como bancos. Isso proporciona uma maior eficiência e rapidez nas transações financeiras;</p>
+
+                        <p>2. Reserva de valor: As criptomoedas também podem ser utilizadas como uma reserva de valor, semelhante a outros ativos financeiros como ouro e imóveis. Os indivíduos podem investir em criptomoedas com a expectativa de que seu valor aumente ao longo do tempo, possibilitando o uso desses ativos para objetivos futuros.</p>
+            </div>
+        </aside>
+
+        
+
+
+        <div class="campo_filtro">
+
+            <div class="select_box">
+
+                <select name="select" id="select">
+                    <option value="Mostrar todos" selected > Mostrar todos </option>
+                    <option value="valor1">Bitcoin</option>
+                    <option value="valor2" >Ethereum</option>
+                    <option value="valor3">Tether</option>
+                    <option value="valor4">USD Coin</option>
+                  </select>
+
+            </div>
+
+
+        </div>
+        
+        
+
+        
+        <div class="conversao" id="con">
+            <select name="select" id="select_conversao" class="conversoa_espaco">
+                <option value="" selected > Escolha para converter </option>
+                <option value="valor1">Bitcoin</option>
+                <option value="valor2">Ethereum</option>
+                <option value="valor3">Tether</option>
+                <option value="valor4">USD Coin</option>
+            </select>
+            <input type="number" placeholder="Insira um valor..." id="input_converter" class="conversoa_espaco">
+
+            <img src="img/conversao.png" alt="img conversao" onclick="converter()"class="conversoa_espaco">
+
+            <button onclick="converter()"></button>
+
+            
+        </div>
+        
+        <div class="res" id="res">
+            <p style="color: #ebebeb;">__</p>
+        </div>
+
+
+        <div class="cards">
+            <div class="card1" id="cards_id">
+                <p style="margin-bottom: 7px;">BITCOIN</p>
+                <p>
+                    <img src="img/bitcoin.jpg" alt="logo da bitcoin" >
+                </p>
+
+                <p>
+                    O Bitcoin é a primeira criptomoeda descentralizada, criada em 2009. Funciona sem necessidade de intermediários e tem um suprimento limitado de 21 milhões de unidades. Ganhou popularidade como meio de investimento e pagamento, apesar de sua associação inicial com atividades ilícitas.
+                </p>
+            </div>
+
+            <div class="card2" id="cards_id">
+                <p style="margin-bottom: 7px;">ETHEREUM</p>
+                <p>
+                    <img src="img/img_ethereum.jpg" alt="logo da ethereum" >
+                </p>
+                
+                <p>
+                    
+                    O Ethereum é uma plataforma de blockchain lançada em 2015, criada por Vitalik Buterin. Destaca-se por suportar contratos inteligentes e aplicativos descentralizados, operando com sua própria criptomoeda chamada Ether. Amplamente utilizado para desenvolver aplicativos descentralizados em setores como finanças, jogos e identidade digital
+                </p>
+            </div>
+
+            <div class="card3" id="cards_id">
+                <p style="margin-bottom: 7px;" >TETHER</p>
+                <p>
+                    <img src="img/theter.jpg" alt="logo tether" >
+
+                </p>
+
+                <p>
+                    
+                    Tether (USDT) é uma criptomoeda "stablecoin" que busca manter um valor estável em relação ao dólar dos Estados Unidos, embora tenha enfrentado críticas por preocupações com transparência e manipulação de mercado. Ainda assim, é amplamente usada por traders devido à sua suposta estabilidade no mercado de criptomoedas.
+                </p>
+            </div>
+            
+            <div class="card4" id="cards_id">
+                <p style="margin-bottom: 7px;" >USD COIN</p>
+                <p>
+                    <img src="img/usd.png" alt="logo usd">
+                </p>
+
+                <p>
+                
+                    
+                    A USD Coin (USDC) é uma stablecoin vinculada ao dólar americano (USD) em uma proporção de 1:1. Amplamente utilizada em exchanges de criptomoedas e DeFi, oferece estabilidade de valor para transações eficientes no mercado de criptomoedas.
+               </p>
+            </div>
+        </div>
+
+
+
+        
+            
+    
+
+
+    </main>
+
+
+   <footer>
+        <p style="margin-bottom: 0px;">
+            Contato: 99999-9999
+        </p>
+        <p style="margin-bottom: 0px;">
+            Email: starkindustries@gmail.com
+        </p>
+
+        <p>
+            Instagram: @starkindustries
+        </p>
+   </footer> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
